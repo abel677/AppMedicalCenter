@@ -6,22 +6,24 @@
       <div class="row justify-content-center">
         <div class="col-lg-4 col-md-6 d-flex flex-column align-items-center justify-content-center">
 
-          <div class="d-flex justify-content-center py-4">
-            <a routerLink="login" class="logo d-flex align-items-center w-auto">
-              <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor"
-                class="bi bi-heart-pulse text-white" viewBox="0 0 16 16">
-                <path fill-rule="evenodd"
-                  d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053.918 3.995.78 5.323 1.508 7H.43c-2.128-5.697 4.165-8.83 7.394-5.857.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17c3.23-2.974 9.522.159 7.394 5.856h-1.078c.728-1.677.59-3.005.108-3.947C13.486.878 10.4.28 8.717 2.01L8 2.748ZM2.212 10h1.315C4.593 11.183 6.05 12.458 8 13.795c1.949-1.337 3.407-2.612 4.473-3.795h1.315c-1.265 1.566-3.14 3.25-5.788 5-2.648-1.75-4.523-3.434-5.788-5Zm8.252-6.686a.5.5 0 0 0-.945.049L7.921 8.956 6.464 5.314a.5.5 0 0 0-.88-.091L3.732 8H.5a.5.5 0 0 0 0 1H4a.5.5 0 0 0 .416-.223l1.473-2.209 1.647 4.118a.5.5 0 0 0 .945-.049l1.598-5.593 1.457 3.642A.5.5 0 0 0 12 9h3.5a.5.5 0 0 0 0-1h-3.162l-1.874-4.686Z" />
-              </svg>
-              <span class="d-none d-lg-block mx-2 text-info">Medical <b class="text-white">Center</b></span>
-            </a>
-          </div>
+          
 
           <div class="card mb-3 bg-form">
 
             <div class="card-body border-shadow  rounded">
 
-              <div class="pt-4 pb-2">
+              <div class="d-flex justify-content-center mt-3">
+                <a routerLink="login" class="logo d-flex align-items-center w-auto">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor"
+                    class="bi bi-heart-pulse text-white" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                      d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053.918 3.995.78 5.323 1.508 7H.43c-2.128-5.697 4.165-8.83 7.394-5.857.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17c3.23-2.974 9.522.159 7.394 5.856h-1.078c.728-1.677.59-3.005.108-3.947C13.486.878 10.4.28 8.717 2.01L8 2.748ZM2.212 10h1.315C4.593 11.183 6.05 12.458 8 13.795c1.949-1.337 3.407-2.612 4.473-3.795h1.315c-1.265 1.566-3.14 3.25-5.788 5-2.648-1.75-4.523-3.434-5.788-5Zm8.252-6.686a.5.5 0 0 0-.945.049L7.921 8.956 6.464 5.314a.5.5 0 0 0-.88-.091L3.732 8H.5a.5.5 0 0 0 0 1H4a.5.5 0 0 0 .416-.223l1.473-2.209 1.647 4.118a.5.5 0 0 0 .945-.049l1.598-5.593 1.457 3.642A.5.5 0 0 0 12 9h3.5a.5.5 0 0 0 0-1h-3.162l-1.874-4.686Z" />
+                  </svg>
+                  <span class="d-none d-lg-block mx-2 text-info">Medical <b class="text-white">Center</b></span>
+                </a>
+              </div>
+
+              <div class="pb-2">
                 <h5 class="card-title text-center pb-0 fs-4">Ingrese a su cuenta</h5>
                 <p class="text-center small">Ingrese su email y contraseña para iniciar sesión</p>
               </div>
@@ -35,10 +37,8 @@
                     <input formControlName="email" type="email" name="yourEmail" class="form-control" id="yourEmail" required> 
                     <div class="invalid-feedback">Por favor ingrese un email!</div>                        
                   </div>
-                 
                 </div>
-
-
+                
                 <div class="col-12">
                   <label for="yourPassword" class="form-label">Contraseña</label>
                   <input formControlName="password" type="password" name="password" class="form-control"
@@ -46,19 +46,24 @@
                   <div class="invalid-feedback">Por favor ingrese su contraseña!</div>
                 </div>
                 
-
                 <div class="col-12">
                   <div class="form-check">
                     <input class="form-check-input" type="checkbox" name="remember" value="true" id="rememberMe">
                     <label class="form-check-label" for="rememberMe">Recordar cuenta</label>
                   </div>
                 </div>
+
                 <div class="col-12">
-                  <button class="btn btn-primary w-100" type="submit">Login</button>
+                  <button class="btn btn-primary w-100" type="submit">Ingresar</button>
                 </div>
-                <span class="text-danger text-center" *ngIf="invalid">
-                  {{ mensaje }}
-                </span>
+
+                <div *ngIf="invalid" class="alert alert-danger d-flex align-items-center" role="alert">
+                  <i class="bi bi-exclamation-triangle-fill"></i>
+                  <div class="mx-2">
+                    {{ mensaje }}
+                  </div>
+                </div>
+                
                 <div class="col-12">
                   <p class="small mb-0">¿No tienes cuenta? <a href="register">Crea una cuenta</a></p>
                 </div>

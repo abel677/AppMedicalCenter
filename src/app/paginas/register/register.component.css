@@ -1,0 +1,19 @@
+
+.border-shadow{
+    box-shadow: 5px 5px 5px 5px rgb(54, 57, 59);
+}
+
+input.ng-invalid.ng-touched{
+    border:solid  tomato 2px;
+}
+input.ng-valid{
+    border: solid green 2px;
+}
+.fondo{
+    background: #bdc3c7;  
+    background: -webkit-linear-gradient(to right, #2c3e50, #bdc3c7); 
+    background: linear-gradient(to right, #2c3e50, #bdc3c7); 
+}
+.bg-form{
+    background-color: rgba(196, 196, 196, 0.6);
+}

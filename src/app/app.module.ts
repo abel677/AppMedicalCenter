@@ -15,6 +15,8 @@ import { LoginComponent } from './paginas/login/login.component';
 import { DashboardComponent } from './paginas/dashboard/dashboard.component';
 import { PacienteComponent } from './paginas/paciente/paciente.component';
 import { CargarScriptsService } from './servicios/cargar-scripts.service';
+import { RegisterComponent } from './paginas/register/register.component';
+import { QuicklinkModule } from 'ngx-quicklink';
 
 
 
@@ -28,13 +30,15 @@ import { CargarScriptsService } from './servicios/cargar-scripts.service';
     LoginComponent,
     DashboardComponent,
     PacienteComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    QuicklinkModule
   ],
   providers: [HttpClient,LoginService, CargarScriptsService],
   bootstrap: [AppComponent]
