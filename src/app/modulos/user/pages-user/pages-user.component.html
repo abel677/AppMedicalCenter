@@ -1,1 +1,23 @@
-<p>pages-user works!</p>
+<div class="container py-3">
+    <table class="table table-hover table-dark ">
+        <thead>
+            <tr>
+                <th scope="col">Nombre</th>
+                <th scope="col">email</th>
+                <th scope="col">acción</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let user of lista">
+                <th scope="row">{{user.name}}</th>
+                <td scope="row">{{user.email}}</td>
+                <td scope="row">
+                    
+                    <a class="px-2 bg-info rounded" role="button">editar<i class="bi bi-pencil-square"></i></a> |
+                    <a class="px-2 bg-danger rounded" role="button" (click)="deleteUsers()" >eliminar<i class="bi bi-trash"></i></a>
+                   
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
